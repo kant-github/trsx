@@ -1,8 +1,8 @@
-import "./globals.css";
+import "./../globals.css";
 import type { Metadata } from "next";
 import { Caveat, Inter, Montserrat } from "next/font/google";
-import { Providers } from "../provider";
-import AppBarClient from "../components/AppBarClient";
+import { Providers } from "../../provider";
+import AppBarClient from "../../components/AppBarClient";
 
 const inter = Inter({ subsets: ["latin"] });
 const caveat = Caveat({ subsets: ["latin"] });
@@ -23,10 +23,10 @@ export default function RootLayout({
       <Providers>
         <body className={`${kanit.className}`}>
           <div className="min-w-screen min-h-screen bg-[#ebe6e6]">
-            {/* <div className="fixed h-20 top-0 z-50">
+            <div className="fixed h-20 top-0 z-50">
               <AppBarClient />
-            </div> */}
-            <div className="flex-grow">
+            </div>
+            <div className="flex-grow pt-20">
               {children}
             </div>
           </div>

@@ -8,12 +8,12 @@ export default function () {
     const router = useRouter();
     const session = useSession();
     return <div className="w-screen h-full">
-        <Appbar 
-            onSignin={async() => await signIn()} 
-            onSignout={async() => {
+        <Appbar
+            onSignin={async () => await signIn()}
+            onSignout={async () => {
                 await signOut();
                 router.push("/api/auth/signin")
-            }} 
-            user={session.data?.user}/>
+            }}
+            user={session.data?.user} />
     </div>
 }

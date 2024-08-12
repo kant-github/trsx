@@ -2,15 +2,17 @@
 
 export const TextInput = ({
     placeholder,
-    onChange,
-    label
+    setInput,
+    label,
+    type
 }: {
     placeholder: string;
-    onChange: (value: string) => void;
+    setInput: any;
     label: string;
+    type? : string
 }) => {
-    return <div className="pt-2">
-        <label className="block mb-2 text-sm text-white font-medium text-gray-900">{label}</label>
-        <input onChange={(e) => onChange(e.target.value)} type="text" id="first_name" className=" border border-[#B5C0D0] text-gray-900 text-sm bg-white rounded-lg  focus:outline-none block w-full p-2.5" placeholder={placeholder} />
+    return <div className="pt-6">
+        <label className="block mb-1 text-sm font-medium text-black">{label}</label>
+        <input onChange={(e) => setInput(e.target.value)} type={type ? "password": "text"} id="first_name" className=" border border-[#B5C0D0] text-gray-900 text-sm bg-white rounded-lg  focus:outline-none block w-full p-2.5" placeholder={placeholder} />
     </div>
 }

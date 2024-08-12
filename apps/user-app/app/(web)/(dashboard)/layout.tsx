@@ -1,4 +1,4 @@
-import { SidebarItem } from "../../components/SideBarItem";
+import { SidebarItem } from "../../../components/SideBarItem";
 
 export default function Layout({
   children,
@@ -7,14 +7,14 @@ export default function Layout({
 }): JSX.Element {
   return (
     <div className="flex min-w-screen overflow-y-auto">
-        <div className="w-72 fixed left-0 border-r border-[#344C64] bg-[#35374B] min-h-screen pt-24">
+        <div className="w-72 fixed left-0 border-r border-[#344C64] bg-[#35374B] min-h-screen pt-4">
             <div>
                 <SidebarItem href={"/dashboard"} icon={<HomeIcon />} title="Home" />
                 <SidebarItem href={"/transfer"} icon={<TransferIcon />} title="Transfer" />
                 <SidebarItem href={"/transactions"} icon={<TransactionsIcon />} title="Transactions" />
             </div>
         </div>
-        <div className="flex-grow pt-20 pl-72 bg-[#ebe6e6]">
+        <div className="flex-grow ml-72 bg-[#ebe6e6]">
           {children}
         </div>
           
