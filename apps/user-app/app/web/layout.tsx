@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import { Caveat, Inter, Montserrat } from "next/font/google";
 import { Providers } from "../../provider";
 import AppBarClient from "../../components/AppBarClient";
-
+import { getServerSession } from "next-auth";
+import { authOptions } from "../lib/auth";
+import { redirect } from 'next/navigation'
+import { AppBar } from "../../components/AppBar"
+// import { signOut, useSession } from "next-auth/react"
 const inter = Inter({ subsets: ["latin"] });
 const caveat = Caveat({ subsets: ["latin"] });
 const kanit = Montserrat({ subsets: ["latin"], weight:["400"] });
@@ -18,13 +22,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }): JSX.Element {
+
+  
+
   return (
     <html lang="en">
       <Providers>
         <body className={`${kanit.className}`}>
           <div className="min-w-screen min-h-screen bg-[#ebe6e6]">
             <div className="fixed h-20 top-0 z-50">
-              <AppBarClient />
+              <AppBar/>
             </div>
             <div className="flex-grow pt-20">
               {children}

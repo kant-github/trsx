@@ -9,9 +9,9 @@ export default function Layout({
     <div className="flex min-w-screen overflow-y-auto">
         <div className="w-72 fixed left-0 border-r border-[#344C64] bg-[#35374B] min-h-screen pt-4">
             <div>
-                <SidebarItem href={"/dashboard"} icon={<HomeIcon />} title="Home" />
-                <SidebarItem href={"/transfer"} icon={<TransferIcon />} title="Transfer" />
-                <SidebarItem href={"/transactions"} icon={<TransactionsIcon />} title="Transactions" />
+                <SidebarItem href={"/web/dashboard"} icon={<HomeIcon />} title="Home" />
+                <SidebarItem href={"/web/transfer"} icon={<TransferIcon />} title="Transfer" />
+                <SidebarItem href={"/web/transactions"} icon={<TransactionsIcon />} title="Transactions" />
             </div>
         </div>
         <div className="flex-grow ml-72 bg-[#ebe6e6]">

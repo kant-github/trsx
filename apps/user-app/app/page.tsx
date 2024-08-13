@@ -18,9 +18,11 @@ import { TextInput } from "@repo/ui/textinput";
 import { Button } from "@repo/ui/button";
 import { Greybutton } from "@repo/ui/greybutton"
 import { useRouter } from "next/navigation";
+import { getServerSession } from "next-auth";
+import { authOptions } from "./lib/auth";
 
 export default function() {
-  
+
   return (
     <div className="h-screen fixed w-screen rounded-md bg-[#020817] flex flex-col  items-center justify-center antialiased">
       <div className="max-w-4xl mb-28 mx-auto p-4">
@@ -28,7 +30,7 @@ export default function() {
           Your Wallet, Reinvented
         </h1>
         <p className="text-neutral-200 max-w-lg mx-auto my-6 text-md text-center relative z-10 ">
-          Embrace seamless transactions with our payment app—where security meets simplicity. Effortlessly send money, pay bills, and shop online, all at your fingertips. Experience fast, secure payments and take control of your finances with ease. Join the movement toward a smarter way to pay!
+          Embrace seamless transactions with our payment app where security meets simplicity. Effortlessly send money, pay bills, and shop online, all at your fingertips. Experience fast, secure payments and take control of your finances with ease. Join the movement toward a smarter way to pay!
         </p>
         <div className="z-[50] mt-8 w-full flex justify-center">
           <div className="z-[50] w-[80%]">

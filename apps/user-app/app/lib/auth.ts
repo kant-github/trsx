@@ -1,6 +1,8 @@
 import db from "@repo/db/client";
 import CredentialsProvider from "next-auth/providers/credentials"
 import bcrypt from "bcrypt";
+import { getToken } from "next-auth/jwt";
+import { NextAuthOptions } from 'next-auth';
 // import { pages } from "next/dist/build/templates/app-page";
 
 export const authOptions = {
@@ -11,10 +13,10 @@ export const authOptions = {
                 phone: { label: "Phone number", type: "text", placeholder: "1231231231", required: true },
                 password: { label: "Password", type: "password", required: true }
             },
-            // TODO: User credentials type from next-aut
+            
             async authorize(credentials: any) {
-                // Do zod validation, OTP validation here
-                if(!credentials.phone){
+            
+                if (!credentials.phone) {
                     return null
                 }
                 const hashedPassword = await bcrypt.hash(credentials.password, 10);
@@ -26,7 +28,7 @@ export const authOptions = {
 
                 if (existingUser) {
                     const passwordValidation = await bcrypt.compare(credentials.password, existingUser.password);
-                    if(!passwordValidation) {
+                    if (!passwordValidation) {
                         throw new Error("Incorrect Password");
                     }
                     if (passwordValidation) {
@@ -69,9 +71,5 @@ export const authOptions = {
             session.user.id = token.sub;
             return session;
         },
-        async redirect({ url, baseUrl }: { url: string, baseUrl: string }) {
-            // Redirect to /dashboard after a successful sign-in
-            return baseUrl + "/dashboard";
-        }
     }
-}
+} satisfies NextAuthOptions;

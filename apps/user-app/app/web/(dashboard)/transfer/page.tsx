@@ -7,14 +7,13 @@ import { authOptions } from "../../../lib/auth";
 
 async function getBalance() {
     const session = await getServerSession(authOptions);
-    console.log(db);
-    console.log("session is ------------------------------------------>",session);
     const balance = await db.balance.findFirst({
         where: {
             userId: Number(session?.user?.id)
         }
     });
-    console.log("balance is ------------------------------------------->", balance)
+    console.log(balance);
+    
     return {
         amount: balance?.amount || 0,
         locked: balance?.locked || 0
