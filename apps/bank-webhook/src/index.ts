@@ -2,6 +2,7 @@ import express from "express"
 import db from "@repo/db/client"
 
 const app = express();
+app.use(express.json())
 
 interface paymentInformationProps {
     token: string,
@@ -16,31 +17,30 @@ app.post("/webHook", async(req, res) => {
         userId: req.body.user_identifier,
         amount: req.body.amount
     }
+    console.log(paymentInformation);
 
     try {
         await db.$transaction([
-
             db.balance.updateMany({
                 where: {
                     userId: Number(paymentInformation.userId)
                 },
                 data: {
                     amount: {
+                        // You can also get this from your DB
                         increment: Number(paymentInformation.amount)
                     }
                 }
             }),
-
             db.onRampTransaction.updateMany({
                 where: {
                     token: paymentInformation.token
-                }, 
+                },
                 data: {
                     status: "Success",
                 }
             })
-
-        ])
+        ]);
         res.json({
             message: "Captured"
         })
@@ -56,5 +56,5 @@ app.post("/webHook", async(req, res) => {
 
 
 app.listen(3003, () => {
-    console.log("App is listwning at port 3000")
+    console.log("App is listwning at port 3003")
 })

@@ -21,12 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Providers>
-        <body className={`${kanit.className}`}>
-          <div className="min-w-screen min-h-screen bg-[#ebe6e6]">
-            {/* <div className="fixed h-20 top-0 z-50">
-              <AppBarClient />
-            </div> */}
-            <div className="flex-grow">
+        <body className={`${kanit.className} min-h-screen bg-[#020817]`}>
+          <div className="bg-[#ebe6e6]">
+            <div className="fixed h-20 top-0 z-50">
+              {/* <AppBarClient /> */}
+            </div>
+            <div className="">
               {children}
             </div>
           </div>

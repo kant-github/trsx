@@ -37,7 +37,6 @@ export const Appbar = ({
                 <img src="./test.png" className="w-16  z-[50] relative" alt="check" />
             </div>
             <p className={`${font.className} text-white text-3xl pt-5`}>Pine Payments</p>
-            <p className="text-red-500">{user?.name}</p>
         </div>
         <div className="flex flex-col justify-center pt-2">
             <Button onClick={async () => {
