@@ -3,7 +3,13 @@ import CredentialsProvider from "next-auth/providers/credentials"
 import bcrypt from "bcrypt";
 import { getToken } from "next-auth/jwt";
 import { NextAuthOptions } from 'next-auth';
-// import { pages } from "next/dist/build/templates/app-page";
+import { z } from "zod"
+
+const signUpBody = z.object({
+    phone: z.string().min(10, "Phone number must be at least 10 digits").max(11, "Phone number must be at most 11 digits"),
+    password: z.string().min(6, "Password must be at least 6 characters long")
+})
+
 
 export const authOptions = {
     providers: [
@@ -13,9 +19,16 @@ export const authOptions = {
                 phone: { label: "Phone number", type: "text", placeholder: "1231231231", required: true },
                 password: { label: "Password", type: "password", required: true }
             },
-            
+
             async authorize(credentials: any) {
-            
+
+                const parsedSignInbody = signUpBody.safeParse(credentials);
+
+                if (!parsedSignInbody.success) {
+                    throw new Error(`Send proper phone number and password with atleast 6 chars`);
+                }
+
+
                 if (!credentials.phone) {
                     return null
                 }
@@ -45,7 +58,13 @@ export const authOptions = {
                     const user = await db.user.create({
                         data: {
                             number: credentials.phone,
-                            password: hashedPassword
+                            password: hashedPassword,
+                            Balance: {
+                                create: {
+                                    amount: 10000 * 100,
+                                    locked: 0
+                                }
+                            }
                         }
                     });
 

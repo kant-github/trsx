@@ -10,21 +10,18 @@ export default function Layout({
       <div className="w-72 border-r fixed border-[#344C64] bg-[#35374B] h-screen">
         <div className="mt-24">
           <SidebarItem href={"/web/dashboard"} icon={<HomeIcon />} title="Home" />
-          <SidebarItem href={"/web/transfer"} icon={<TransferIcon />} title="Transfer" />
+          <SidebarItem href={"/web/p2p/transfer"} icon={<Kela />} title="Send p2p" />
+          <SidebarItem href={"/web/transfer"} icon={<TransferIcon />} title="Wallet" />
           <SidebarItem href={"/web/transactions"} icon={<TransactionsIcon />} title="Transactions" />
-          <SidebarItem href={"/web/p2p"} icon={<Kela />} title="Send p2p" />
         </div>
       </div>
       <div className="bg-gradient-to-r from-[#eddcd2] to-[#fff1e6] ml-72 w-[calc(100vw-18rem)]">
         {children}
       </div>
-
- 
     </div>
   );
 }
 
-// Icons Fetched from https://heroicons.com/
 function HomeIcon() {
   return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5">
     <path fill-rule="evenodd" d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z" clip-rule="evenodd" />

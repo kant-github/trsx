@@ -10,7 +10,7 @@ const nunitoDark = Rajdhani({ subsets: ["latin"], weight:["600"]});
 export function LinkPreviewDemo() {
   return (
     <div className="flex justify-center items-center h-[40rem] flex-col px-4 text-2xl select-none">
-      <p className={`${nunitoLight.className} font-thin`}>Ready to chat? Drop me a message on </p>
+      <p className={`${nunitoLight.className} font-thin`}>Want to chat? Drop me a message on </p>
       <p>
         <LinkPreview url="https://x.com/khairrishi" className={`${nunitoDark.className} font-black`}>
           Twitter,

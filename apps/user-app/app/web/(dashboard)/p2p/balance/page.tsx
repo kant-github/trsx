@@ -1,12 +1,10 @@
-import { BalanceCard } from "../../../../components/BalanceCard";
-import { SendMoneyp2p } from "../../../../components/SendMoneyp2p";
-import { Cover } from "../../../../components/ui/cover";
-import Image from "next/image";
-import transfer from "../../../../public/transfer.jpg"
-import balance from "../../../../public/balance.jpg"
-import { ContainerScroll } from "../../../../components/ui/container-scroll-animation";
+import { SendMoneyp2p } from "../../../../../components/SendMoneyp2p";
+import { Cover } from "../../../../../components/ui/cover";
+import Image from "next/image"
+import transfer from "../../../../../public/transfer.jpg"
+import balanceImg from "../../../../../public/balance.jpg"
 
-export default function () {
+export default function() {
     return (
         <div className="mt-32 mx-16">
             <div className="mb-16 mt-28">
@@ -24,13 +22,12 @@ export default function () {
             </div>
             <div className="grid grid-cols-2 gap-16 mt-12">
                 <div className="mt-16">
-                    <BalanceCard amount={2000} locked={0} />
+                    {/* <BalanceCard amount={balance.amount} locked={balance.locked} /> */}
                 </div>
                 <div className="ml-20">
-                    <Image width={400} height={400} className="mix-blend-multiply" alt="transfer" src={balance}/>
+                    <Image width={400} height={400} className="mix-blend-multiply" alt="transfer" src={balanceImg}/>
                 </div>
             </div>
         </div>
     )
 }
-

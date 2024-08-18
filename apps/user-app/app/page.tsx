@@ -1,25 +1,7 @@
-//" import "{ getServerSession } from "next-auth";
-// import { authOptions } from "./lib/auth";
-// import { redirect } from 'next/navigation'
-
-// export default async function () {
-//   const session = await getServerSession(authOptions);
-//   if(session?.user) {
-//     redirect("/dashboard")
-//   } else{
-//     redirect("/api/auth/signin")
-//   }
-
-// }
-
 import React from "react";
 import { BackgroundBeams } from "../components/ui/background-beams";
-import { TextInput } from "@repo/ui/textinput";
-import { Button } from "@repo/ui/button";
 import { Greybutton } from "@repo/ui/greybutton"
-import { useRouter } from "next/navigation";
-import { getServerSession } from "next-auth";
-import { authOptions } from "./lib/auth";
+
 
 export default async function() {
   
@@ -39,7 +21,7 @@ export default async function() {
           </div>
         </div>
       </div>
-      {/* <BackgroundBeams /> */}
+      <BackgroundBeams />
     </div>
   );
 }

@@ -13,7 +13,7 @@ export default function () {
                 await signOut({
                     callbackUrl: "/api/auth/signin"  // Optional: Redirect to the home page after sign-out
                 });
-                // router.push("/api/auth/signin")
+                
             }}
             user={session.data?.user} />
     </div>
