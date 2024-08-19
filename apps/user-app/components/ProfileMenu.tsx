@@ -1,31 +1,21 @@
 import React, { useState, useEffect, useRef } from "react";
 import UpdateProfile from "./UpdateProfile";
-import { useSession } from "next-auth/react";
 import { ProjectReadMe } from "./ProjectReadMe";
-
-
-
 
 export default function ProfileMenu() {
     const [isOpen, setIsOpen] = useState(false);
     const [dialogIsOpen, setDialogIsOpen] = useState(false);
     const [projectReadMe, setProjectReadMe] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
-
-
     function tapHandler() {
         setIsOpen((prev) => !prev);
-
     }
-
     function projectReadMeHandler() {
         setProjectReadMe((prev) => !prev)
     }
-
     function dialogOpenHandler() {
         setDialogIsOpen((prev) => !prev)
     }
-
     useEffect(() => {
         function handleClickOutside(event: MouseEvent) {
             if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -49,7 +39,7 @@ export default function ProfileMenu() {
                 <div className="absolute right-8 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
                     <div className="py-1">
                         <div className="block px-4 py-2 text-sm text-gray-700 border-b border-[#c4c4c4]">
-                            <i>Hi{" "}{"name"}</i>
+                            <i>Hi{" "}{"pookie"}</i>
                         </div>
                         <a onClick={dialogOpenHandler} href="#update-profile" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                             Update Profile
@@ -57,7 +47,7 @@ export default function ProfileMenu() {
                         <a onClick={projectReadMeHandler} href="#readme" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                             Project Readme
                         </a>
-                        <a href="https://github.com/kant-github/trsx" target="_blank" className="block px-4 py-2 text-sm text-blue-700 bg-blue-50 hover:bg-blue-100">
+                        <a href="https://github.com/kant-github/trsx" target="_blank" rel="noopener noreferrer" className="block px-4 py-2 text-sm text-blue-700 bg-blue-50 hover:bg-blue-100">
                             Github
                         </a>
                         <a href="#logout" className="block px-4 py-2 text-sm text-red-600 bg-red-50 hover:bg-red-100">

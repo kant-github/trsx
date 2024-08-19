@@ -9,8 +9,6 @@ import { toast } from "sonner";
 export function SendMoneyp2p() {
     const [amount, setAmount] = useState("");
     const [number, setNumber] = useState("");
-    const [paymentOnLoad, setPaymentOnLoad] = useState(false);
-    const [paymentDisplay, setPaymentDisplay] = useState(false);
     const [paymentStatus, setPaymentStatus] = useState<"idle" | "processing" | "completed">("idle");
 
 

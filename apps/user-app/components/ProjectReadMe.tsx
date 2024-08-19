@@ -3,7 +3,7 @@ import { DM_Sans } from "next/font/google"
 
 const dm_sans = DM_Sans({ subsets: ["latin"], weight: "200" });
 
-export function ProjectReadMe({ setProjectReadMe }: { setProjectReadMe: () => void }) {
+export function ProjectReadMe({ setProjectReadMe }: { setProjectReadMe: React.Dispatch<React.SetStateAction<boolean>> }) {
 
     function cutHandler() {
         setProjectReadMe((prev) => !prev)

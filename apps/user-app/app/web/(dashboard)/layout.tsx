@@ -12,7 +12,6 @@ export default function Layout({
           <SidebarItem href={"/web/dashboard"} icon={<HomeIcon />} title="Home" />
           <SidebarItem href={"/web/p2p/transfer"} icon={<Kela />} title="Send p2p" />
           <SidebarItem href={"/web/transfer"} icon={<TransferIcon />} title="Wallet" />
-          <SidebarItem href={"/web/transactions"} icon={<TransactionsIcon />} title="Transactions" />
         </div>
       </div>
       <div className="bg-gradient-to-r from-[#eddcd2] to-[#fff1e6] ml-72 w-[calc(100vw-18rem)]">
@@ -35,14 +34,6 @@ function TransferIcon() {
   </svg>
 
 }
-
-function TransactionsIcon() {
-  return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5">
-    <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-13a.75.75 0 0 0-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 0 0 0-1.5h-3.25V5Z" clip-rule="evenodd" />
-  </svg>
-
-}
-
 
 function Kela() {
   return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5">

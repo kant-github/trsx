@@ -1,5 +1,5 @@
 "use server"
-import { getServerSession, unstable_getServerSession } from "next-auth";
+import { getServerSession } from "next-auth";
 import { authOptions } from "../auth";
 import prisma from "@repo/db/client";
 import bcrypt from "bcrypt";

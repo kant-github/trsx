@@ -10,7 +10,6 @@ export default function Layout({
             <div className="flex flex-row gap-8 ml-12">
                 <TopBarItem title="transfer" href="/web/p2p/transfer" />
                 <TopBarItem title="history" href="/web/p2p/history" />
-                <TopBarItem title="balance" href="/web/p2p/balance" />
             </div>
             <div className="bg-gradient-to-r from-[#eddcd2] to-[#fff1e6]">
                 {children}

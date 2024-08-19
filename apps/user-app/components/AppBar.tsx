@@ -6,9 +6,6 @@ import { signOut, useSession } from "next-auth/react";
 import logo from "../public/test.png"
 import Image from "next/image";
 import ProfileMenu from "./ProfileMenu";
-import { getServerSession } from "next-auth";
-import { authOptions } from "../app/lib/auth";
-import prisma from "@repo/db/client";
 const font = Dancing_Script({ subsets: ["latin"], weight: "400" });
 
 interface AppbarProps {
@@ -16,7 +13,6 @@ interface AppbarProps {
         name?: string | null;
     },
 }
-
 
 export function AppBar({
 }: AppbarProps) {

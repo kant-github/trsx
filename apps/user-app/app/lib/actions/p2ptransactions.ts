@@ -6,7 +6,6 @@ import { authOptions } from "../auth"
 
 export async function p2ptransactions() {
     const session = await getServerSession(authOptions);
-    console.log(session.user.id);
     if( !session ) {
         return {
             message: "Unauthenticated"

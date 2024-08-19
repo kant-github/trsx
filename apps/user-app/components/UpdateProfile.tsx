@@ -2,8 +2,6 @@
 import { Card } from "@repo/ui/card"
 import { TextInput } from "@repo/ui/textinput"
 import { useState } from "react"
-import { getServerSession } from "next-auth";
-import { authOptions } from "../app/lib/auth";
 import { profileUpdate } from "../app/lib/actions/profileUpdate";
 import { toast } from "sonner"
 

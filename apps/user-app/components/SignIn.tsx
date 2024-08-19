@@ -1,12 +1,11 @@
 "use client"
-import { Button } from "@repo/ui/button";
 import { Card } from "@repo/ui/card";
 import { TextInput } from "@repo/ui/textinput";
 
 export default function SignInCard({ setPhone, setPassword, handleSubmit }: any) {
 
     async function onClickHandler() {
-        await handleSubmit(); // Calls the handleSubmit function passed from the parent
+        await handleSubmit();
     }
 
     return (
@@ -18,7 +17,6 @@ export default function SignInCard({ setPhone, setPassword, handleSubmit }: any)
                     <button className="text-white bg-black w-full hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-3 me-2 mb-2 " onClick={onClickHandler} type="button">Sign In</button>
                 </div>
             </Card>
-
         </div>
     );
 }

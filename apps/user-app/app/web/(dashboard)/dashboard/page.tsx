@@ -2,14 +2,12 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "../../../lib/auth";
 import { redirect } from "next/navigation"
 import Image from "next/image";
-import { Caveat, Montserrat } from "next/font/google"
+import { Montserrat } from "next/font/google"
 import logo from "../../../../public/final.jpg"
 import React from "react";
 import { Cover } from "../../../../components/ui/cover";
 import { ContainerScroll } from "../../../../components/ui/container-scroll-animation";
 import {LinkPreviewDemo} from "../../../../components/AboutMe"
-
-const caveat = Caveat({ subsets: ["latin"] });
 const monstreat = Montserrat({ subsets: ["latin"], weight:["300"]});
 
 export default async function () {
@@ -17,8 +15,6 @@ export default async function () {
 
   if (!session?.user) {
     redirect("/api/auth/signin");
-    return null;
-
   }
   return (
     <div className="mt-32">

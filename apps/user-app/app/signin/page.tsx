@@ -10,7 +10,7 @@ export default function SignIn() {
     const [phone, setPhone] = useState("");
     const [password, setPassword] = useState("");
     const router = useRouter();
-    const { data: session, status } = useSession();
+    const { status } = useSession();
 
     useEffect(() => {
         if (status === "authenticated") {
@@ -31,17 +31,15 @@ export default function SignIn() {
 
         if (!res?.error) {
             router.push("/web/dashboard");
-        } else {
-            // Handle error (e.g., show an error message)
         }
     };
 
     if (status === "loading") {
-        return <div>Loading...</div>; // Show a loading state while the session status is being determined
+        return <div>Loading...</div>;
     }
 
     if (status === "authenticated") {
-        return null; // You can return null or a loader while redirecting
+        return null;
     }
 
     return (

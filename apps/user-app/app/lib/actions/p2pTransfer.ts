@@ -1,14 +1,11 @@
 "use server"
-
 import prisma from "@repo/db/client";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../auth";
-import { fromTheme } from "tailwind-merge";
 
 export async function p2pTransfer(number: string, amount: number) {
     const session = await getServerSession(authOptions);
     const fromUser = session?.user?.id;
-    console.log(session)
 
     if (!fromUser) {
         throw new Error("User not authenticated");

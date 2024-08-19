@@ -11,14 +11,14 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "../../packages/ui/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{ts,tsx}", // Include src path
+    "./src/**/*.{ts,tsx}",
   ],
-  darkMode: "class", // Enable dark mode class strategy
+  darkMode: "class",
   theme: {
-    extend: {}, // Extend existing theme if needed
+    extend: {},
   },
   plugins: [
-    addVariablesForColors, // Include custom plugin for color variables
+    addVariablesForColors,
   ],
 };
 

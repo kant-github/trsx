@@ -1,5 +1,6 @@
 import { useRouter } from "next/navigation"
 import { Dancing_Script } from 'next/font/google'
+import Image from "next/image";
 
 const font = Dancing_Script({ subsets: ["latin"], weight: "400" });
 
@@ -14,7 +15,7 @@ export const SinInAppBarComponent = () => {
                 router.push("/")
             }} className="flex items-center hover:cursor-pointer">
                 <div className="text-lg pl-6 flex flex-col justify-center">
-                    <img src="./test.png" className="w-16  z-[50] relative" alt="check" />
+                    <Image src="./test.png" className="w-16  z-[50] relative" alt="check" />
                 </div>
                 <p className={`${font.className} text-white text-3xl pt-5`}>Pine Payments</p>
             </div>
