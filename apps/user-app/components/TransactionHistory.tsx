@@ -18,6 +18,7 @@ async function getTransactions() {
 
 export default async function () {
     const transactions = await getTransactions()
+    console.log("For changes");
     return (
         <div className="w-4/5 mx-auto">
             <Card title="Recent wallet transactions ">
