@@ -5,6 +5,8 @@ import { OnRampTransactions } from "../../../../components/OnRampTransactions";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../../../lib/auth";
 import { Cover } from "../../../../components/ui/cover";
+import { Prisma } from '@prisma/client';
+
 
 async function getBalance() {
     const session = await getServerSession(authOptions);
@@ -27,6 +29,7 @@ async function getOnRampTransactions() {
             userId: Number(session?.user?.id)
         }
     });
+    //@ts-ignore
     return txns.map(t => ({
         time: t.startTime,
         amount: t.amount,

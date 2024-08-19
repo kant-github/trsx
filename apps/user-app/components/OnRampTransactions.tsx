@@ -1,6 +1,5 @@
 import { Card } from "@repo/ui/card";
-import { OnRampStatus } from "@prisma/client"; // Import this from your Prisma schema
-
+import { OnRampStatus } from "@prisma/client"
 interface TransactionProps {
     time: Date;
     amount: number;
