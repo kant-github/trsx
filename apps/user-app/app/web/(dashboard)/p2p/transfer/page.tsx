@@ -4,7 +4,6 @@ import Image from "next/image"
 import transfer from "../../../../../public/transfer.jpg"
 
 export default function() {
-    console.log("Hi")
     return (
         <div className="mx-16 h-[73vh]">
             <div className="mb-16 mt-28">
