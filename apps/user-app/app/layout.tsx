@@ -1,12 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Caveat, Inter, Montserrat } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import { Providers } from "../provider";
-import AppBarClient from "../components/AppBarClient";
 import { Toaster } from "sonner";
-
-const inter = Inter({ subsets: ["latin"] });
-const caveat = Caveat({ subsets: ["latin"] });
 const kanit = Montserrat({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
