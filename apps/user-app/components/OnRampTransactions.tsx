@@ -11,10 +11,10 @@ export const OnRampTransactions = ({ transactions }: { transactions: Transaction
         return (
             <Card title="Recent wallet transactions">
                 <div className="text-center pb-8 pt-8">No Recent transactions</div>
-                
             </Card>
         );
     }
+    console.log("Hi");
 
     return (
         <Card title="Recent wallet transactions">
