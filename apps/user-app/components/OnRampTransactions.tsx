@@ -6,17 +6,15 @@ interface TransactionProps {
     status: OnRampStatus;
     provider: string;
 }
-
 export const OnRampTransactions = ({ transactions }: { transactions: TransactionProps[] }) => {
     if (!transactions.length) {
         return (
             <Card title="Recent wallet transactions">
                 <div className="text-center pb-8 pt-8">No Recent transactions</div>
+                
             </Card>
         );
     }
-
-    console.log(typeof transactions[0]?.status);
 
     return (
         <Card title="Recent wallet transactions">
