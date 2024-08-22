@@ -24,7 +24,7 @@ jobs:
         context: .
         file: ./docker/Dockerfile.user
         push: true
-        tags: kantdocker1/trsx-dockerhub:latest  # Replace with your Docker Hub username and repository
+        tags: kantdocker1/trsx-dockerhub:latest 
 
     - name: Verify Pushed Image
-      run: docker pull kantdocker1/trsx-dockerhub:latest  # Replace with your Docker Hub username and repository
+      run: docker pull kantdocker1/trsx-dockerhub:latest
