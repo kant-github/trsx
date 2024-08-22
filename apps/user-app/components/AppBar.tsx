@@ -13,7 +13,6 @@ interface AppbarProps {
         name?: string | null;
     },
 }
-
 export function AppBar({
 }: AppbarProps) {
     const router = useRouter();

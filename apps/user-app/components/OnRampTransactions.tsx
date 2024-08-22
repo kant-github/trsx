@@ -16,8 +16,6 @@ export const OnRampTransactions = ({ transactions }: { transactions: Transaction
         );
     }
 
-    console.log(typeof transactions[0]?.status);
-
     return (
         <Card title="Recent wallet transactions">
             <div className="">
