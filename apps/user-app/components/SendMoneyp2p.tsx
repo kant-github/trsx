@@ -26,7 +26,7 @@ export function SendMoneyp2p() {
     }
 
     return (
-        <div>
+        <div className="mx-auto">
             <Card title="Send Money">
                 <TextInput label={"Amount in INR"} placeholder={"Amount"} setInput={setAmount} />
                 <TextInput label={"Enter Phone No %"} placeholder={"Mobile No"} setInput={setNumber} />
