@@ -12,7 +12,6 @@ export default function () {
                 await signOut({
                     callbackUrl: "/api/auth/signin"
                 });
-                
             }}
             user={session.data?.user} />
     </div>
