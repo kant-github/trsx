@@ -10,6 +10,7 @@ export const TextInput = ({
   setInput: any;
   label: string;
   type?: string;
+  amount?: number
 }) => {
   return (
     <div className="w-full md:pt-6 pt-4">

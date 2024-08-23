@@ -50,7 +50,6 @@ export function AppBar({}: AppbarProps) {
                                 callbackUrl: "/api/auth/signin"
                             });
                         }}
-                        className="text-sm sm:text-base"
                     >
                         {user ? "Logout" : "Login"}
                     </Button>
