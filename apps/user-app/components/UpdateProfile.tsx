@@ -32,7 +32,7 @@ export default function ({ dropDown }: { dropDown: () => void }) {
                 <TextInput setInput={setName} label={"Name"} placeholder={"Name"} />
                 <TextInput setInput={setEmail} label={"E-mail"} placeholder={"E-mail"} />
                 <div className="flex justify-center gap-10">
-                    <TextInput setInput={setPassword} label={"Change password"} placeholder={"Type your password"} type={"password"} />
+                    <TextInput setInput={setPassword} label={"Password"} placeholder={"Type your password"} type={"password"} />
                     <TextInput setInput={setPassword2} label={"Set password"} placeholder={"Re-type your password"} type={"password"} />
                 </div>
                 <div className="flex justify-end mt-4">

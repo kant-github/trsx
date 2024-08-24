@@ -24,7 +24,7 @@ export function AppBar({
             <div onClick={() => {
                 router.push("/web/dashboard")
             }} className="flex items-center hover:cursor-pointer">
-                <div className="text-lg pl-6 flex flex-col justify-center">
+                <div className="text-lg md:pl-6 flex flex-col justify-center">
                     <Image
                         width={64}
                         height={64}
@@ -33,7 +33,7 @@ export function AppBar({
                         alt="check"
                     />
                 </div>
-                <p className={`${font.className} text-white text-3xl pt-5`}>Pine Payments</p>
+                <p className={`${font.className} text-white text-xl md:text-2xl pt-5`}>Pine Payments</p>
 
             </div>
             <div className="flex flex-row justify-center gap-6 items-center pt-2">

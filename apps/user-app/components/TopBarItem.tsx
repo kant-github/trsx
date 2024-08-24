@@ -12,7 +12,7 @@ export const TopBarItem = ({ href, title }: { href: string; title: string; }) =>
             className={`flex items-center cursor-pointer transition duration-300 ease-in-out transform ${selected ? "text-[#914F1E] scale-105" : "text-[#3C3D37] hover:text-[#914F1E] hover:scale-105"} `}
             onClick={() => router.push(href)}
         >
-            <div className="text-sm font-light tracking-wider">
+            <div className="md:text-sm text-xs font-light tracking-wider">
                 {title}
             </div>
         </div>

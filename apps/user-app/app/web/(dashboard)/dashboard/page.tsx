@@ -11,7 +11,7 @@ export default async function Page() {
   return (
     <div className="flex flex-col mt-28 md:mt-32 px-4">
       <div className="flex flex-col justify-center items-center space-y-4 md:space-y-6">
-        <div className="md:text-md mb-4 flex items-center rounded-full border bg-[#ebecf5] px-4 py-2.5 font-sans text-sm font-semibold uppercase text-[#35364a] shadow-md md:px-5 cursor-context-menu">
+        <div className="md:text-md mb-4 flex items-center rounded-full border bg-[#ebecf5] px-4 py-2.5 font-sans text-xs font-semibold uppercase text-[#35364a] shadow-md md:px-5 cursor-context-menu">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -31,14 +31,14 @@ export default async function Page() {
             <circle cx="12" cy="17" r="5"></circle>
             <path d="M12 18v-2h-.5"></path>
           </svg>
-          Secure your transaction with ease
+          Transaction made easy
         </div>
 
         <h1 className="mb-3 bg-gradient-to-r from-[#0d3b66] to-[#0061ff] bg-clip-text text-center font-bold text-3xl text-transparent sm:text-4xl md:mb-4 md:text-5xl lg:text-6xl">
           Pine payments
         </h1>
 
-        <div className="w-full px-4 pb-4 text-center text-2xl text-neutral-800 dark:text-neutral-200 sm:text-3xl md:text-4xl lg:text-5xl">
+        <div className="w-full px-4 pb-4 text-center text-xl text-neutral-800 dark:text-neutral-200 sm:text-xl md:text-4xl lg:text-5xl">
           Making Payments a <Cover>Breeze!</Cover>
         </div>
 

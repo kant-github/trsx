@@ -49,10 +49,7 @@ export default function SignIn() {
             </div>
             <div className="min-h-screen fixed w-screen bg-[#020817] flex flex-col items-center justify-center antialiased">
                 <div className="w-1/2 mx-auto p-4 z-10 flex-grow flex flex-col items-center justify-center">
-                    <h1 className="relative text-md md:text-5xl mb-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold">
-                        {/* Ready to Get Started? */}
-                    </h1>
-                    <div className="z-50 w-[24rem] md:w-[32rem]">
+                    <div className="z-50 w-[20rem] md:w-[32rem]">
                         <SignInCard setPhone={setPhone} setPassword={setPassword} handleSubmit={handleSubmit} />
                     </div>
                 </div>

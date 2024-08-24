@@ -7,7 +7,7 @@ export default function Layout({
 }): JSX.Element {
     return (
         <div className="mt-28">
-            <div className="flex flex-row gap-8 ml-12">
+            <div className="flex flex-row gap-8 md:ml-12 ml-6">
                 <TopBarItem title="transfer" href="/web/p2p/transfer" />
                 <TopBarItem title="history" href="/web/p2p/history" />
             </div>

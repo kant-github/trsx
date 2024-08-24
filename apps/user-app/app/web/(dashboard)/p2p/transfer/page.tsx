@@ -6,7 +6,7 @@ import transfer from "../../../../../public/transfer.jpg";
 export default function() {
     return (
         <div className="mx-4 md:mx-16 h-[73vh]">
-            <div className="mb-16 mt-20">
+            <div className="mb-16 md:mt-20 mt-12">
                 <h1 className="mb-3 bg-gradient-to-r from-[#0d3b66] to-[#0061ff] bg-clip-text text-center font-bold text-xl text-transparent md:mb-4 md:text-5xl">
                     Send money <Cover>quickly</Cover> and securely to
                     <Cover>friends.</Cover>

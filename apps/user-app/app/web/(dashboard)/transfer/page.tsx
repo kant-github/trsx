@@ -44,7 +44,7 @@ export default async function () {
     return (
         <div className="flex flex-col h-screen px-4 py-6 mt-20 md:px-8 md:py-12">
             <div className="mb-8 md:mb-12 mt-8 md:mt-12">
-                <h1 className="bg-gradient-to-r from-[#0d3b66] to-[#0061ff] bg-clip-text text-center font-bold text-2xl md:text-4xl text-transparent">
+                <h1 className="bg-gradient-to-r from-[#0d3b66] to-[#0061ff] bg-clip-text text-center font-bold text-xl md:text-4xl text-transparent">
                     Quickly top up your wallet for 
                     <Cover> smooth transactions.</Cover>
                 </h1>
