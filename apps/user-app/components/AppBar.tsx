@@ -34,7 +34,6 @@ export function AppBar({
                     />
                 </div>
                 <p className={`${font.className} text-white text-xl md:text-2xl pt-5`}>Pine Payments</p>
-
             </div>
             <div className="flex flex-row justify-center gap-6 items-center pt-2">
                 <div className="mt-2">
