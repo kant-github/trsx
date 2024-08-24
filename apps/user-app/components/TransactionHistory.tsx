@@ -21,7 +21,7 @@ export default async function () {
     console.log("For changes");
     return (
         <div className="w-4/5 mx-auto">
-            <Card title="Recent wallet transactions ">
+            <Card title="Recent transactions ">
                 <div className="max-h-80 overflow-y-auto scroll-smooth">
                     {
                         transactions.reverse().map(t =>

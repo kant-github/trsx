@@ -60,7 +60,7 @@ export default async function Page() {
         </ContainerScroll>
       </div>
 
-      <div className="md:-mt-72">
+      <div className="md:-mt-64">
         <LinkPreviewDemo />
       </div>
     </div>

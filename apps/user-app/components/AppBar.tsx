@@ -20,12 +20,12 @@ export function AppBar({
     const session = useSession();
     const user = session.data?.user
     return (
-        <div className="flex w-screen h-full justify-between bg-[#04080F] border-[#1e293b] border-b px-4">
+        <div className="flex flex-row w-screen h-full justify-between bg-[#04080F] border-[#1e293b] border-b px-4">
             <div onClick={() => {
                 router.push("/web/dashboard")
             }} className="flex items-center hover:cursor-pointer">
                 <div className="text-lg pl-6 flex flex-col justify-center">
-                    <Image 
+                    <Image
                         width={64}
                         height={64}
                         src="/test.png"
