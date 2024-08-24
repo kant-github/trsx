@@ -63,7 +63,6 @@ export default function ProfileMenu() {
                             <div className="w-4/5 md:w-2/5">
                                 <UpdateProfile dropDown={dialogOpenHandler} />
                             </div>
-
                         </div>
                     </>
                 )
