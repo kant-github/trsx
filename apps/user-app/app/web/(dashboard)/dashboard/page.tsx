@@ -9,7 +9,7 @@ export default async function Page() {
 
   
   return (
-    <div className="flex flex-col mt-24 md:mt-32 px-4">
+    <div className="flex flex-col mt-28 md:mt-32 px-4">
       <div className="flex flex-col justify-center items-center space-y-4 md:space-y-6">
         <div className="md:text-md mb-4 flex items-center rounded-full border bg-[#ebecf5] px-4 py-2.5 font-sans text-sm font-semibold uppercase text-[#35364a] shadow-md md:px-5 cursor-context-menu">
           <svg
