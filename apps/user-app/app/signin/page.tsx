@@ -52,7 +52,7 @@ export default function SignIn() {
                     <h1 className="relative text-md md:text-5xl mb-6 bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold">
                         {/* Ready to Get Started? */}
                     </h1>
-                    <div className="z-50 w-2/3 mx-auto flex justify-center">
+                    <div className="z-50 w-[24rem] md:w-[32rem]">
                         <SignInCard setPhone={setPhone} setPassword={setPassword} handleSubmit={handleSubmit} />
                     </div>
                 </div>

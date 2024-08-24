@@ -60,7 +60,7 @@ export default function ProfileMenu() {
                 dialogIsOpen && (
                     <>
                         <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50 w-full">
-                            <div className="w-2/5">
+                            <div className="w-4/5 md:w-2/5">
                                 <UpdateProfile dropDown={dialogOpenHandler} />
                             </div>
 
@@ -72,7 +72,7 @@ export default function ProfileMenu() {
                 projectReadMe && (
                     <>
                         <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md flex justify-center items-center z-50 w-full ">
-                            <div className="w-2/5">
+                            <div className=" w-4/5 md:w-2/5">
                                 <ProjectReadMe setProjectReadMe={setProjectReadMe} />
                             </div>
                         </div>

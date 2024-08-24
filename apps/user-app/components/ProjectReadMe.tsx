@@ -1,18 +1,19 @@
+"use client";
 import React from 'react';
-import { DM_Sans } from "next/font/google"
+import { DM_Sans } from "next/font/google";
 
 const dm_sans = DM_Sans({ subsets: ["latin"], weight: "200" });
 
 export function ProjectReadMe({ setProjectReadMe }: { setProjectReadMe: React.Dispatch<React.SetStateAction<boolean>> }) {
 
     function cutHandler() {
-        setProjectReadMe((prev) => !prev)
+        setProjectReadMe((prev) => !prev);
     }
 
     return (
-        <div className={` ${dm_sans.className}max-w-4xl mx-auto p-8 bg-transparent rounded-lg max-h-[65vh] text-white overflow-y-auto`}>
-            <div className='flex justify-between'>
-                <h1 className="text-4xl font-bold text-center mb-6">Project Overview</h1>
+        <div className={`${dm_sans.className} max-w-full md:max-w-4xl mx-auto p-4 md:p-8 bg-white rounded-lg max-h-[65vh] text-white overflow-y-auto`}>
+            <div className='flex flex-row justify-between items-center mb-6'>
+                <h1 className="text-3xl md:text-4xl font-bold text-center mb-4 text-black md:mb-0">Project Overview</h1>
                 <span>
                     <svg
                         onClick={cutHandler}
@@ -21,7 +22,7 @@ export function ProjectReadMe({ setProjectReadMe }: { setProjectReadMe: React.Di
                         viewBox="0 0 24 24"
                         strokeWidth="1.5"
                         stroke="#f50004"
-                        className="w-8 h-8 cursor-pointer p-1 transition-colors duration-300 ease-in-out"
+                        className="w-6 h-6 md:w-8 md:h-8 cursor-pointer p-1 transition-colors duration-300 ease-in-out"
                     >
                         <path
                             strokeLinecap="round"
@@ -32,17 +33,16 @@ export function ProjectReadMe({ setProjectReadMe }: { setProjectReadMe: React.Di
                 </span>
             </div>
 
-
-            <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
-                <p className="text-white  leading-snug">
+            <section className="mb-6">
+                <h2 className="text-xl md:text-2xl font-semibold text-black mb-4">Introduction</h2>
+                <p className="text-black leading-snug">
                     This project is a payment gateway application designed to simulate the process of sending money between users. While it does not handle real money transactions due to the lack of banking API access, it successfully manages the transfer of dummy money between registered users. The primary goal of this project was to explore and understand the architecture of a payment gateway system.
                 </p>
             </section>
 
-            <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">Key Features</h2>
-                <ul className="list-disc pl-5 space-y-2 text-white">
+            <section className="mb-6">
+                <h2 className="text-xl md:text-2xl text-black font-semibold mb-4">Key Features</h2>
+                <ul className="list-disc pl-5 space-y-2 text-black">
                     <li>Transfer dummy money between registered users.</li>
                     <li>User-friendly interface fully designed by the developer.</li>
                     <li>Transaction history and wallet management features.</li>
@@ -51,12 +51,12 @@ export function ProjectReadMe({ setProjectReadMe }: { setProjectReadMe: React.Di
                 </ul>
             </section>
 
-            <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">Technology Stack</h2>
-                <p className="text-white leading-relaxed">
+            <section className="mb-6">
+                <h2 className="text-xl text-black md:text-2xl font-semibold mb-4">Technology Stack</h2>
+                <p className="text-black leading-relaxed">
                     The application was built using the following technologies:
                 </p>
-                <ul className="list-disc pl-5 space-y-2 text-white mt-2">
+                <ul className="list-disc pl-5 space-y-2 text-black mt-2">
                     <li><strong>Next.js:</strong> For both frontend and backend development.</li>
                     <li><strong>Prisma:</strong> ORM for database management.</li>
                     <li><strong>PostgreSQL:</strong> The database used for storing transaction data.</li>
@@ -67,21 +67,21 @@ export function ProjectReadMe({ setProjectReadMe }: { setProjectReadMe: React.Di
                 </ul>
             </section>
 
-            <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">Challenges and Solutions</h2>
-                <p className="text-white leading-relaxed">
+            <section className="mb-6">
+                <h2 className="text-xl md:text-2xl font-semibold text-black mb-4">Challenges and Solutions</h2>
+                <p className="text-black leading-relaxed">
                     During development, a key challenge was resolving a vulnerability where two concurrent requests could manipulate the JavaScript thread when transferring money to multiple users simultaneously. This was mitigated by implementing database locking and ensuring transactional integrity throughout the application.
                 </p>
             </section>
 
-            <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">Mentorship</h2>
-                <p className="text-white leading-relaxed">
+            <section className="mb-6">
+                <h2 className="text-xl md:text-2xl font-semibold text-black mb-4">Mentorship</h2>
+                <p className="text-black leading-relaxed">
                     This project was developed under the mentorship of <strong>Harkirat Singh</strong>, whose guidance was invaluable throughout the development process.
                 </p>
             </section>
 
-            <footer className="text-center mt-10">
+            <footer className="text-center mt-8">
                 <p className="text-gray-600">© 2024 Rishi K. All rights reserved.</p>
             </footer>
         </div>

@@ -45,11 +45,3 @@ export default function ({ dropDown }: { dropDown: () => void }) {
 
     )
 }
-
-
-{/* <div className="bg-white p-6 rounded-md shadow-lg w-1/3">
-            <div>
-                <p className="text-2xl">Update Your profile</p>
-            </div>
-            
-        </div> */}

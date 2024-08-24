@@ -9,7 +9,7 @@ export default function SignInCard({ setPhone, setPassword, handleSubmit }: any)
     }
 
     return (
-        <div className="w-full flex justify-center items-center ">
+        <div className="w-[4/5] ">
             <Card title={"Sign In"}>
                 <TextInput label={"Enter Your Phone Number"} placeholder={"Phone No"} setInput={setPhone} />
                 <TextInput label={"Enter Your Password"} placeholder={"Password"} setInput={setPassword} type={"password"} />
