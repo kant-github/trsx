@@ -25,7 +25,13 @@ export function AppBar({
                 router.push("/web/dashboard")
             }} className="flex items-center hover:cursor-pointer">
                 <div className="text-lg pl-6 flex flex-col justify-center">
-                    <Image className="w-16  z-[50] relative" alt="Logo" src={logo} />
+                    <Image 
+                        width={64}
+                        height={64}
+                        src="/test.png"
+                        className="w-16  z-[50] relative"
+                        alt="check"
+                    />
                 </div>
                 <p className={`${font.className} text-white text-3xl pt-5`}>Pine Payments</p>
 

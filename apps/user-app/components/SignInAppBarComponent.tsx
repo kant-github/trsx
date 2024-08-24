@@ -6,7 +6,7 @@ const font = Dancing_Script({ subsets: ["latin"], weight: "400" });
 
 export const SinInAppBarComponent = () => {
 
-    
+
     const router = useRouter();
 
     return (
@@ -15,7 +15,13 @@ export const SinInAppBarComponent = () => {
                 router.push("/")
             }} className="flex items-center hover:cursor-pointer">
                 <div className="text-lg pl-6 flex flex-col justify-center">
-                    <Image src="./test.png" className="w-16  z-[50] relative" alt="check" />
+                    <Image
+                        width={64}
+                        height={64}
+                        src="/test.png"
+                        className="w-16  z-[50] relative"
+                        alt="check"
+                    />
                 </div>
                 <p className={`${font.className} text-white text-3xl pt-5`}>Pine Payments</p>
             </div>
