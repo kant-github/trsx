@@ -22,8 +22,7 @@ export function ProjectReadMe({ setProjectReadMe }: { setProjectReadMe: React.Di
                         viewBox="0 0 24 24"
                         strokeWidth="1.5"
                         stroke="#f50004"
-                        className="w-6 h-6 md:w-8 md:h-8 cursor-pointer p-1 transition-colors duration-300 ease-in-out"
-                    >
+                        className="w-6 h-6 md:w-8 md:h-8 cursor-pointer p-1 transition-colors duration-300 ease-in-out">
                         <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
