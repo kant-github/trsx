@@ -15,8 +15,6 @@ export async function profileUpdate(name: string, email: string, password: strin
                 message: "User is not authenticated",
             };
         }
-
-        // Update user profile in the database
         const updatedUser = await prisma.user.update({
             where: {
                 id: Number(session.user.id),
