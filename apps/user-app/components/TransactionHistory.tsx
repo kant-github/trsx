@@ -27,7 +27,7 @@ export default async function Transactions() {
                             className="flex flex-col md:flex-row justify-between pt-3 pb-1 border-b border-[#b4bfcf]"
                         >
                             <div>
-                                <div className="text-xs md:text-sm">Received INR</div>
+                                <div className="text-xs md:text-sm">Sent INR</div>
                                 <div className="text-slate-600 text-[10px] md:text-xs">
                                     {t.timeStamp.toDateString()}
                                 </div>

@@ -34,7 +34,7 @@ export default async function Page() {
           Transaction made easy
         </div>
 
-        <h1 className="mb-3 bg-gradient-to-r from-[#0d3b66] to-[#0061ff] bg-clip-text text-center font-bold text-3xl text-transparent sm:text-4xl md:mb-4 md:text-5xl lg:text-6xl">
+        <h1 className="mb-3 select-none bg-gradient-to-r from-[#0d3b66] to-[#0061ff] bg-clip-text text-center font-bold text-3xl text-transparent sm:text-4xl md:mb-4 md:text-5xl lg:text-6xl">
           Pine payments
         </h1>
 
