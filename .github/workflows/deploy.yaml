@@ -39,4 +39,10 @@ jobs:
           sudo docker pull kantdocker1/trsx-dockerhub:latest
           sudo docker stop web-app || true
           sudo docker rm web-app || true
-          sudo docker run -d -e DATABASE_URL=${{ secrets.DATABASE_URL }} --restart unless-stopped --name web-app -p 3005:3000 kantdocker1/trsx-dockerhub:latest
+          sudo docker run -d \
+            -e DATABASE_URL=${{ secrets.DATABASE_URL }} \
+            -e JWT_SECRET=${{ secrets.JWT_SECRET }} \
+            -e NEXTAUTH_URL=${{ secrets.NEXTAUTH_URL }} \
+            --restart unless-stopped \
+            --name web-app \
+            -p 3005:3000 kantdocker1/trsx-dockerhub:latest
