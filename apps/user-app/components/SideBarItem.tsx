@@ -12,8 +12,7 @@ export const SidebarItem = ({ href, title, icon }: { href: string; title: string
                 }`}
             onClick={() => {
                 router.push(href);
-            }}
-        >
+            }}>
             <div className="pr-2">{icon}</div>
             <div
                 className={`text-sm font-light tracking-wider ${selected ? "text-white" : "text-[#B6BBC4]"

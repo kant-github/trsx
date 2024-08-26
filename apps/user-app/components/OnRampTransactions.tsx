@@ -20,8 +20,8 @@ export const OnRampTransactions = ({ transactions }: { transactions: Transaction
 
     return (
         <Card title="Recent wallet transactions">
-            <div className="">
-                {transactions.slice(0, 4).reverse().map((t) => (
+            <div className="overflow-y-auto max-h-[16rem]">
+                {transactions.reverse().map((t) => (
                     <div key={t.time.getTime()} className="flex justify-between pt-3 pb-1 border-b border-[#b4bfcf]">
                         <div>
                             <div className="text-sm">Received INR</div>

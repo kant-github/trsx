@@ -7,7 +7,7 @@ app.use(express.json())
 interface paymentInformationProps {
     token: string,
     userId: string,
-    amount: string
+    amount: number
 }
 
 app.post("/webHook", async(req, res) => {
@@ -15,7 +15,7 @@ app.post("/webHook", async(req, res) => {
     const paymentInformation: paymentInformationProps = {
         token: req.body.token,
         userId: req.body.user_identifier,
-        amount: req.body.amount
+        amount: Number(req.body.amount) * 100
     }
 
     try {
