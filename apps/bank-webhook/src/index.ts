@@ -17,6 +17,7 @@ app.post("/webHook", async(req, res) => {
         userId: req.body.user_identifier,
         amount: Number(req.body.amount) * 100
     }
+    console.log(paymentInformation);
 
     try {
         await db.$transaction([
